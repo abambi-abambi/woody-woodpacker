@@ -1,0 +1,42 @@
+Раздел 3.7.2.1 тома 1: Базовая архитектура архитектуры Intel 64 и IA-32 Руководство разработчика программного обеспечения, в котором говорится о 64-разрядном режиме.
+
+Register operands in 64-bit mode can be any of the following:
+• 64-bit general-purpose registers (RAX, RBX, RCX, RDX, RSI, RDI, RSP, RBP, or R8-R15)
+• 32-bit general-purpose registers (EAX, EBX, ECX, EDX, ESI, EDI, ESP, EBP, or R8D-R15D)
+• 16-bit general-purpose registers (AX,  BX,  CX,  DX,  SI,  DI,  SP,  BP,  or R8W-R15W)
+• 8-bit general-purpose registers: (AL,  BL,  CL,  DL,  SIL, DIL, SPL, BPL, and R8L-R15L are available using REX
+prefixes; AL, BL, CL, DL, AH, BH, CH, DH are available without using REX prefixes.
+
+• Segment registers (CS, DS, SS, ES, FS, and GS)
+• RFLAGS register
+• x87 FPU registers (ST0 through ST7, status word, control word, tag word, data operand pointer, and instruction
+pointer)
+• MMX registers (MM0 through MM7)
+• XMM registers (XMM0 through XMM15) and the MXCSR register
+• Control registers (CR0, CR2, CR3, CR4, and CR8) and system table pointer registers (GDTR, LDTR, IDTR, and
+task register)
+• Debug registers (DR0, DR1, DR2, DR3, DR6, and DR7)
+• MSR registers
+• RDX:RAX register pair representing a 128-bit operand
+
+https://www.cyberforum.ru/assembler-linux/thread2276428.html
+Системные вызовы в Linux
+"64-битный код (x64 и x32 ABI, архитектура x86-64)
+
+В регистр RAX загружается номер функции.
+Параметры (зависящие от функции) загружаются в регистры RDI (первый параметр), RSI (второй), RDX (третий), R10 (четвёртый), R8 (пятый), R9 (шестой).
+Выполняется инструкция syscall (не путайте с sysenter - это две разные инструкции!)
+
+Внимание! Значения регистров RCX и R11 при выполнении системного вызова уничтожаются!"
+
+
+https://docviewer.yandex.ru/view/0/?page=46&*=MrFwO5TM6D8bR%2F9cL1ph5OfX0Ed7InVybCI6Imh0dHBzOi8vd2FzbS5pbi9hdHRhY2htZW50cy9pZ29yX3poaXJrb3ZfLWF1dGgtX2xvdy1sZXZlbF9wcm9ncmFtbWluZy1fYy1fYS16LWxpYi1vcmctcGRmLjY0NjYvIiwidGl0bGUiOiJpZ29yX3poaXJrb3ZfLWF1dGgtX2xvdy1sZXZlbF9wcm9ncmFtbWluZy1fYy1fYS16LWxpYi1vcmctcGRmLjY0NjYiLCJub2lmcmFtZSI6dHJ1ZSwidWlkIjoiMCIsInRzIjoxNjYyNzE4MjM0NjEyLCJ5dSI6IjM3MTU3ODk0NjE2NTkxNzcwOTEiLCJzZXJwUGFyYW1zIjoidG09MTY2MjcxODE4MiZ0bGQ9cnUmbGFuZz1taXMmdGV4dD1sZWErcmF4JTJDKyU1QnJzaSstKyUyOG1zZystK19zdGFydCUyOSU1RCZ1cmw9aHR0cHMlM0EvL3dhc20uaW4vYXR0YWNobWVudHMvaWdvcl96aGlya292Xy1hdXRoLV9sb3ctbGV2ZWxfcHJvZ3JhbW1pbmctX2MtX2Etei1saWItb3JnLXBkZi42NDY2LyZscj0yMTMmbWltZT1wZGYmbDEwbj1ydSZzaWduPTI4YjFiNjU4MTVjMTE4MjhkMzllOTZiY2ZhYTQ3YmY4JmtleW5vPTAifQ%3D%3D
+Учебник по ассемблеру
+
+
+http://natalia.appmat.ru/c&c++/assembler.html
+Учебник по ассемблеру
+
+http://www.av-assembler.ru/instructions/loop.php?ysclid=l7u9b4vz7j336831235
+Инструкция LOOP
+"Ещё одна ошибка - это изменение значения регистра CX в теле цикла. В итоге команда LOOP будет работать неправильно."
