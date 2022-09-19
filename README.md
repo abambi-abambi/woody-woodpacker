@@ -2,11 +2,11 @@
 is a simple elf64 binary encryptor.
 
 
-# Works on:
+# works on:
 - Operation System: Linux - Ubuntu 21.04 64-bits
 
 
-# Languages:
+# languages:
 - C. Compiler: gcc
 
 - Assembler for Linux 64-bits (x86_64). Compiler: nasm + gcc
