@@ -9,7 +9,7 @@ is a simple elf64 binary encryptor.
 # Languages:
 - C. Compiler: gcc
 
-- Assemler for Linux 64-bits (x86_64). Compiler: nasm + gcc
+- Assembler for Linux 64-bits (x86_64). Compiler: nasm + gcc
 
 
 # build the project:
