@@ -2,6 +2,16 @@
 is a simple elf64 binary encryptor.
 
 
+# Works on:
+- Operation System: Linux - Ubuntu 21.04 64-bits
+
+
+# Languages:
+- C. Compiler: gcc
+
+- Assemler for Linux 64-bits (x86_64). Compiler: nasm + gcc
+
+
 # build the project:
 make
 
